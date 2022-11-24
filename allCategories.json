@@ -7,7 +7,7 @@
         "resale_Price": "15000",
         "original_price": "25000",
         "used_time": "1 year",
-        "post_date": "10-10-2022",
+        "published_date": "2022-08-24 17:27:34",
         "seller_name": "Shapna Akter",
         "verified_seller": "true"
     },
@@ -19,8 +19,9 @@
         "resale_Price": "25000",
         "original_price": "40000",
         "used_time": "2 years",
-        "post_date": "15-10-2022",
-        "seller_name": "Shapna Akter"
+        "published_date": "2022-08-24 17:27:34",
+        "seller_name": "Shapna Akter",
+        "verified_seller": "true"
     },
     {
         "category_id": "01",
@@ -30,8 +31,9 @@
         "resale_Price": "15000",
         "original_price": "25000",
         "used_time": "6 months",
-        "post_date": "20-10-2022",
-        "seller_name": "Shapna Akter"
+        "published_date": "2022-08-24 17:27:34",
+        "seller_name": "Shapna Akter",
+        "verified_seller": "true"
     },
     {
         "category_id": "02",
@@ -41,7 +43,7 @@
         "resale_Price": "15000",
         "original_price": "25000",
         "used_time": "1 year",
-        "post_date": "10-10-2022",
+        "published_date": "2022-08-24 17:27:34",
         "seller_name": "Sara Khan"
     },
     {
@@ -52,7 +54,7 @@
         "resale_Price": "25000",
         "original_price": "40000",
         "used_time": "2 years",
-        "post_date": "15-10-2022",
+        "published_date": "2022-08-24 17:27:34",
         "seller_name": "Sara Khan"
     },
     {
@@ -63,7 +65,7 @@
         "resale_Price": "15000",
         "original_price": "25000",
         "used_time": "6 months",
-        "post_date": "20-10-2022",
+        "published_date": "2022-08-24 17:27:34",
         "seller_name": "Sara Khan"
     },
     {
@@ -74,8 +76,8 @@
         "resale_Price": "18000",
         "original_price": "30000",
         "used_time": "1 year",
-        "post_date": "10-10-2022",
-        "seller_name": "Sara Khan"
+        "published_date": "2022-08-24 17:27:34",
+        "seller_name": "Zara Khan"
     },
     {
         "category_id": "03",
@@ -85,8 +87,8 @@
         "resale_Price": "5000",
         "original_price": "12000",
         "used_time": "2 years",
-        "post_date": "15-10-2022",
-        "seller_name": "Sara Khan"
+        "published_date": "2022-08-24 17:27:34",
+        "seller_name": "Zara Khan"
     },
     {
         "category_id": "03",
@@ -96,7 +98,7 @@
         "resale_Price": "8000",
         "original_price": "15000",
         "used_time": "6 months",
-        "post_date": "20-10-2022",
-        "seller_name": "Sara Khan"
+        "published_date": "2022-08-24 17:27:34",
+        "seller_name": "Zara Khan"
     }
 ]
