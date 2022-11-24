@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.qlhnchw.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
@@ -29,15 +29,15 @@ async function run() {
             res.send(categories)
         })
 
-        // categories
-        app.get('/allCategories', async (req, res) => {
-            const id = req.query.category_id;
+        // all categories
+        app.get('/allCategories/:id', async (req, res) => {
+            const id = req.query.id;
             let query = { id }
-            const cursor = reviewCollection.find(query);
+            const cursor = allCategoriesCollection.find(query);
             const allCategories = await cursor.toArray();
             res.send(allCategories)
         })
-        
+
     } finally {
         
     }
