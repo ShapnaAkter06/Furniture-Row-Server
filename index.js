@@ -20,22 +20,40 @@ async function run() {
     try {
         const categoriesCollection = client.db('furnitureRow').collection('categories');
         const allCategoriesCollection = client.db('furnitureRow').collection('allCategories');
+        const bookingsCollection = client.db("furnitureRow").collection("bookings");
 
         //get categories
         app.get('/categories', async(req, res)=>{
             const query = {}
-            const cursor = await categoriesCollection.find(query);
+            const cursor = categoriesCollection.find(query);
             const categories = await cursor.toArray();
             res.send(categories)
         })
 
         // all categories
         app.get('/allCategories/:id', async (req, res) => {
-            const id = req.query.id;
+            const id = req.query.category_id;
             let query = { id }
-            const cursor = categoriesCollection.find(query);
+            const cursor = allCategoriesCollection.find(query);
             const allCategories = await cursor.toArray();
             res.send(allCategories)
+        })
+
+        //Bookings API
+        app.post('/bookings', async (req, res) => {
+            const booking= req.body;
+            const query = {
+                product: booking.product,
+                email: booking.email,
+                productPrice: booking.productPrice
+            }
+            const alreadyBooked = await bookingsCollection.find(query).toArray();
+            if (alreadyBooked.length) {
+                const message = `You have already booked on ${booking.product}`;
+                return res.send({ acknowledged: false, message });
+            }
+            const result = await bookingsCollection.insertOne(booking);
+            res.send(result);
         })
 
     } finally {
