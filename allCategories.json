@@ -1,0 +1,102 @@
+[
+    {
+        "category_id": "01",
+        "title": "Sofa",
+        "image": "https://i.ibb.co/f9TrHJp/Sofa-0.jpg",
+        "location": "Dhaka",
+        "resale_Price": "15000",
+        "original_price": "25000",
+        "used_time": "1 year",
+        "post_date": "10-10-2022",
+        "seller_name": "Shapna Akter",
+        "verified_seller": "true"
+    },
+    {
+        "category_id": "01",
+        "title": "Lobby",
+        "image": "https://i.ibb.co/DLgv4kL/Lobby-Set.jpg",
+        "location": "Dhaka",
+        "resale_Price": "25000",
+        "original_price": "40000",
+        "used_time": "2 years",
+        "post_date": "15-10-2022",
+        "seller_name": "Shapna Akter"
+    },
+    {
+        "category_id": "01",
+        "title": "Chair",
+        "image": "https://i.ibb.co/Qnhf3wd/Chair-1.jpg",
+        "location": "Dhaka",
+        "resale_Price": "15000",
+        "original_price": "25000",
+        "used_time": "6 months",
+        "post_date": "20-10-2022",
+        "seller_name": "Shapna Akter"
+    },
+    {
+        "category_id": "02",
+        "title": "Wardrobe",
+        "image": "https://i.ibb.co/FW4CVg8/Wardrobe-0.jpg",
+        "location": "Dhaka",
+        "resale_Price": "15000",
+        "original_price": "25000",
+        "used_time": "1 year",
+        "post_date": "10-10-2022",
+        "seller_name": "Sara Khan"
+    },
+    {
+        "category_id": "02",
+        "title": "Dressing-Table",
+        "image": "https://i.ibb.co/mH8RRXv/Dressing-Table-0.jpg",
+        "location": "Dhaka",
+        "resale_Price": "25000",
+        "original_price": "40000",
+        "used_time": "2 years",
+        "post_date": "15-10-2022",
+        "seller_name": "Sara Khan"
+    },
+    {
+        "category_id": "02",
+        "title": "Bed-Room-Set",
+        "image": "https://i.ibb.co/ZWhqnYV/Bed-Room-Set.jpg",
+        "location": "Dhaka",
+        "resale_Price": "15000",
+        "original_price": "25000",
+        "used_time": "6 months",
+        "post_date": "20-10-2022",
+        "seller_name": "Sara Khan"
+    },
+    {
+        "category_id": "03",
+        "title": "Dining-Set",
+        "image": "https://i.ibb.co/C6fkFCR/Dining-Set.jpg",
+        "location": "Dhaka",
+        "resale_Price": "18000",
+        "original_price": "30000",
+        "used_time": "1 year",
+        "post_date": "10-10-2022",
+        "seller_name": "Sara Khan"
+    },
+    {
+        "category_id": "03",
+        "title": "Tea-Trolly",
+        "image": "https://i.ibb.co/F6JHh1v/Tea-Trolley.jpg",
+        "location": "Dhaka",
+        "resale_Price": "5000",
+        "original_price": "12000",
+        "used_time": "2 years",
+        "post_date": "15-10-2022",
+        "seller_name": "Sara Khan"
+    },
+    {
+        "category_id": "03",
+        "title": "Mini-Cabinet",
+        "image": "https://i.ibb.co/BZRtBX6/Mini-Cabinet.jpg",
+        "location": "Dhaka",
+        "resale_Price": "8000",
+        "original_price": "15000",
+        "used_time": "6 months",
+        "post_date": "20-10-2022",
+        "seller_name": "Sara Khan"
+    }
+]
