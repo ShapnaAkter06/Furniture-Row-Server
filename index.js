@@ -21,6 +21,7 @@ async function run() {
         const categoriesCollection = client.db('furnitureRow').collection('categories');
         const allCategoriesCollection = client.db('furnitureRow').collection('allCategories');
         const bookingsCollection = client.db("furnitureRow").collection("bookings");
+        const usersCollection = client.db("furnitureRow").collection("users");
 
         //get categories
         app.get('/categories', async(req, res)=>{
@@ -64,6 +65,12 @@ async function run() {
             res.send(bookings);
         })
 
+        //get signUp User
+        app.post('/users', async (req, res) => {
+            const user = req.body;
+            const result = await usersCollection.insertOne(user);
+            res.send(result);
+        })
 
     } finally {
         
