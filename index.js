@@ -42,6 +42,7 @@ async function run() {
         const allCategoriesCollection = client.db('furnitureRow').collection('allCategories');
         const bookingsCollection = client.db("furnitureRow").collection("bookings");
         const usersCollection = client.db("furnitureRow").collection("users");
+        const productsCollection = client.db("furnitureRow").collection("products");
 
         //get categories
         app.get('/categories', async (req, res) => {
@@ -89,7 +90,7 @@ async function run() {
             res.send(bookings);
         })
 
-        //Create signUp User in Db
+        //Add Users in Db
         app.post('/users', async (req, res) => {
             const user = req.body;
             const result = await usersCollection.insertOne(user);
@@ -102,6 +103,13 @@ async function run() {
             const users = await usersCollection.find(query).toArray();
             res.send(users)
         })
+
+        // add product in DB
+        app.post('/products', async (req, res) => {
+            const products = req.body;
+            const result = await productsCollection.insertOne(products);
+            res.send(result)
+        });
 
         //JWT Token
         app.get('/jwt', async (req, res) => {
