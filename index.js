@@ -17,6 +17,7 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 async function run() {
+
     // JWT authentication
     function verifyJWT(req, res, next) {
 
@@ -43,6 +44,18 @@ async function run() {
         const bookingsCollection = client.db("furnitureRow").collection("bookings");
         const usersCollection = client.db("furnitureRow").collection("users");
         const productsCollection = client.db("furnitureRow").collection("products");
+
+        //verify Admin
+        const verifyAdmin = async (req, res, next) => {
+            const decodedEmail = req.decoded.email;
+            const query = { email: decodedEmail };
+            const user = await usersCollection.findOne(query);
+
+            if (user?.role !== 'admin') {
+                return res.status(403).send({ message: 'forbidden access' })
+            }
+            next()
+        }
 
         //get categories
         app.get('/categories', async (req, res) => {
@@ -102,6 +115,14 @@ async function run() {
             const query = {};
             const users = await usersCollection.find(query).toArray();
             res.send(users)
+        })
+
+        // check admin
+        app.get('/users/admin/:email', async (req, res) => {
+            const email = req.params.email;
+            const query = { email }
+            const user = await usersCollection.findOne(query);
+            res.send({ isAdmin: user?.role === 'admin' });
         })
 
         //delete users
