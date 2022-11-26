@@ -125,6 +125,14 @@ async function run() {
             res.send({ isAdmin: user?.role === 'admin' });
         })
 
+        // check seller
+        app.get('/users/seller/:email', async (req, res) => {
+            const email = req.params.email;
+            const query = { email }
+            const user = await usersCollection.findOne(query);
+            res.send({ isSeller: user?.role === 'seller' });
+        })
+
         //delete users
         app.delete('/users/:id', async (req, res) => {
             const id = req.params.id;
