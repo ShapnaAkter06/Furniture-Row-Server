@@ -103,6 +103,14 @@ async function run() {
             res.send(bookings);
         })
 
+        // Bookings Id Api
+        app.get('/bookings/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: ObjectId(id) };
+            const booking = await bookingsCollection.findOne(query)
+            res.send(booking)
+        })
+
         //Add Users in Db
         app.post('/users', async (req, res) => {
             const user = req.body;
