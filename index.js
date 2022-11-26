@@ -54,8 +54,8 @@ async function run() {
 
         // all categories
         app.get('/allCategories/:id', async (req, res) => {
-            const id = req.query.category_id;
-            let query = { id }
+            const id = req.params.id;
+            let query = { category_id : id }
             const cursor = allCategoriesCollection.find(query);
             const allCategories = await cursor.toArray();
             res.send(allCategories)
