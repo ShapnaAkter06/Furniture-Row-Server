@@ -208,6 +208,20 @@ async function run() {
             res.send(result)
         })
 
+        // for advertise API
+        app.put("/products/:id", async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: ObjectId(id) };
+            const update = req.body.status;
+            const updatedDoc = {
+              $set: {
+                status: update,
+              },
+            };
+            const result = await productsCollection.updateOne(query, updatedDoc);
+            res.send(result);
+          });
+
         //JWT Token
         app.get('/jwt', async (req, res) => {
             const email = req.query.email;
